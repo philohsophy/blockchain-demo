@@ -23,13 +23,19 @@ This project
 
 ### Building Block View
 
-![UML](./views/building-blocks-view.jpg)
+---
+
+![UML](./views/building-block-view.jpg)
 
 ### Runtime View
+
+---
 
 ![UML](./views/runtime-view.jpg)
 
 ### Deployment View
+
+---
 
 ![UML](./views/deployment-view.jpg)
 
