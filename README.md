@@ -1,51 +1,45 @@
-# Pseudo Blockchain Project
+# Dummy Blockchain
 
 ## Table of Contents
 
 1. [Outline](#Outline)
-2. [Architecture](#Architecture)
-    - [Building Block View](#Building-Block-View)
-    - [Runtime View](#Runtime-View)
-    - [Deployment View](#Deployment-View)
-3. [Components](#Components)
-    - [Clients](#Clients)
+2. [Components](#Components)
+    - [Transaction Clients](#Transaction-Clients)
     - [Transaction Pool](#Transaction-Pool)
     - [Miners](#Miners)
     - [Blockchain Supervisor](#Blockchain-Supervisor)
-    - [Blockchain](#Blockchain)
-4. [Additional (future) Components](#Additional-(future)-Components)
+    - [Models](#Models)
+3. [Architecture](#Architecture)
+    - [Building Block View](#Building-Block-View)
+    - [Runtime View](#Runtime-View)
+    - [Deployment View](#Deployment-View)
+
+---
 
 ## Outline
 
 This project
 
-## Architecture
-
-### Building Block View
-
----
-
-![UML](./views/building-block-view.jpg)
-
-### Runtime View
+Disclaimer:
+This project
 
 ---
-
-![UML](./views/runtime-view.jpg)
-
-### Deployment View
-
----
-
-![UML](./views/deployment-view.jpg)
 
 ## Components
 
 This Project will consist of the following components:
 
-### Clients
+Component | Repository | Status
+:--- | :--- | :---
+Transaction Clients | [philohsophy/transaction-client](https://github.com/philohsophy/transaction-client) | Not implemented
+Transaction Pool | [philohsophy/transaction-pool](https://github.com/philohsophy/transaction-pool) | v0.1.0
+Miners | [philohsophy/dummy-blockchain-miner](https://github.com/philohsophy/dummy-blockchain-miner) | Not implemented
+Blockchain Supervisor | [philohsophy/dummy-blockchain-supervisor](https://github.com/philohsophy/dummy-blockchain-supervisor) | Not implemented
+Models | [philohsophy/dummy-blockchain-models](https://github.com/philohsophy/dummy-blockchain-models) | In progress
 
-Clients that generate dummy transactions.
+### Transaction Clients
+
+Clients generate transactions.
 
 ### Transaction Pool
 
@@ -68,10 +62,27 @@ Can use different forms of [consensus algorithms](https://www.coindesk.com/short
 - Provides information about current Block (hash+id)
 - Notifies Miners when a new valid Block has been found and accepted
 
-### Blockchain (Database)
+### Models
 
-Database where Blockchain is stored.
+Repository with shared data models used by all services:
 
-## Additional (future) Components
+- Transaction
+- Block
 
-- Service that makes the blockchain graphically visible
+Also provides convinience functions like schema-validation for each model
+
+---
+
+## Architecture
+
+### Building Block View
+
+![UML](./architecture/views/building-block-view.jpg)
+
+### Runtime View
+
+![UML](./architecture/views/runtime-view.jpg)
+
+### Deployment View
+
+TODO
