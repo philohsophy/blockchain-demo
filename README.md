@@ -17,14 +17,12 @@
 
 ## Outline
 
----
-
 This project creates a "dummy"-blockchain scenario utilizing multiple microservices which are orchestrated via Kubernetes.
 
 **It serves as an educational project in order to:**
 
 - dive into [Go](https://golang.org/)
-- become familiar with [GitHub](https://github.com/) & [GitHub Actions](https://docs.github.com/en/actions) (I'm a [GitLab](https://gitlab.com)-guy...)
+- become familiar with [GitHub](https://github.com/) & [GitHub Actions](https://docs.github.com/en/actions) (the author's a [GitLab](https://gitlab.com)-guy...)
 - increase the author's practical experience with [Kubernetes](https://kubernetes.io/)
 - understand this [Blockchain](https://en.wikipedia.org/wiki/Blockchain)-thingy inside-out
 - evaluate some [CNCF graduated & incubating projects](https://www.cncf.io/projects/) like [NATS](https://nats.io/), [Jaeger](https://www.jaegertracing.io/), [Flux](https://fluxcd.io/), ...
@@ -33,8 +31,6 @@ This project creates a "dummy"-blockchain scenario utilizing multiple microservi
 >This project does not claim any correctness regarding topics such as Blockchain, etc.
 
 ## How to run
-
----
 
 The easiest way tu run this project is via [k3d](https://k3d.io/)
 
@@ -51,8 +47,6 @@ kubectl delete -k ./k8s/
 ```
 
 ## Components
-
----
 
 This Project will consist of the following components:
 
@@ -99,8 +93,6 @@ Repository with shared data models used by all services:
 Also provides convinience functions like schema-validation for each model
 
 ## Architecture
-
----
 
 ### Building Block View
 
