@@ -1,0 +1,7 @@
+secretGenerator:
+  - name: postgres-pw
+    literals:
+    - password=transactions_pw
+resources:
+  - postgres-deployment.yaml
+  - transaction-pool-deployment.yaml
