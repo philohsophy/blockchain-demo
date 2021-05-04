@@ -15,18 +15,26 @@
     - [Runtime View](#Runtime-View)
     - [Deployment View](#Deployment-View)
 
----
-
 ## Outline
 
-This project
-
-Disclaimer:
-This project
-
 ---
 
+This project creates a "dummy"-blockchain scenario utilizing multiple microservices which are orchestrated via Kubernetes.
+
+**It serves as an educational project in order to:**
+
+- dive into [Go](https://golang.org/)
+- become familiar with [GitHub](https://github.com/) & [GitHub Actions](https://docs.github.com/en/actions) (I'm a [GitLab](https://gitlab.com)-guy...)
+- increase the author's practical experience with [Kubernetes](https://kubernetes.io/)
+- understand this [Blockchain](https://en.wikipedia.org/wiki/Blockchain)-thingy inside-out
+- evaluate some [CNCF graduated & incubating projects](https://www.cncf.io/projects/) like [NATS](https://nats.io/), [Jaeger](https://www.jaegertracing.io/), [Flux](https://fluxcd.io/), ...
+
+**Disclaimer:**
+>This project does not claim any correctness regarding topics such as Blockchain, etc.
+
 ## How to run
+
+---
 
 The easiest way tu run this project is via [k3d](https://k3d.io/)
 
@@ -42,18 +50,18 @@ kubectl apply -k ./k8s/
 kubectl delete -k ./k8s/
 ```
 
----
-
 ## Components
+
+---
 
 This Project will consist of the following components:
 
 Component | Repository | Status
 :--- | :--- | :---
-Transaction Clients | [philohsophy/transaction-client](https://github.com/philohsophy/transaction-client) | Not implemented
+Transaction Clients | [philohsophy/transaction-client](https://github.com/philohsophy/transaction-client) | To be implemented
 Transaction Pool | [philohsophy/transaction-pool](https://github.com/philohsophy/transaction-pool) | v0.1.0
-Miners | [philohsophy/dummy-blockchain-miner](https://github.com/philohsophy/dummy-blockchain-miner) | Not implemented
-Blockchain Supervisor | [philohsophy/dummy-blockchain-supervisor](https://github.com/philohsophy/dummy-blockchain-supervisor) | Not implemented
+Miners | [philohsophy/dummy-blockchain-miner](https://github.com/philohsophy/dummy-blockchain-miner) | To be implemented
+Blockchain Supervisor | [philohsophy/dummy-blockchain-supervisor](https://github.com/philohsophy/dummy-blockchain-supervisor) | To be implemented
 Models | [philohsophy/dummy-blockchain-models](https://github.com/philohsophy/dummy-blockchain-models) | In progress
 
 ### Transaction Clients
@@ -90,9 +98,9 @@ Repository with shared data models used by all services:
 
 Also provides convinience functions like schema-validation for each model
 
----
-
 ## Architecture
+
+---
 
 ### Building Block View
 
