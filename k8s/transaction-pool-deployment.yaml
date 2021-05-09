@@ -51,7 +51,7 @@ spec:
         tier: transaction-pool
     spec:
       containers:
-      - image: philohsophy/transaction-pool:0.1.0
+      - image: philohsophy/transaction-pool:0.1.1
         name: transaction-pool
         env:
         - name: TRANSACTION_POOL_DB_HOST
