@@ -52,7 +52,7 @@ This Project will consist of the following components:
 
 Component | Repository | Status
 :--- | :--- | :---
-Transaction Clients | [philohsophy/transaction-client](https://github.com/philohsophy/transaction-client) | To be implemented
+Transaction Clients | [philohsophy/transaction-client](https://github.com/philohsophy/transaction-client) | In Progress
 Transaction Pool | [philohsophy/transaction-pool](https://github.com/philohsophy/transaction-pool) | v0.1.1
 Miners | [philohsophy/dummy-blockchain-miner](https://github.com/philohsophy/dummy-blockchain-miner) | To be implemented
 Blockchain Supervisor | [philohsophy/dummy-blockchain-supervisor](https://github.com/philohsophy/dummy-blockchain-supervisor) | To be implemented
