@@ -63,7 +63,7 @@ Additionally the following external services will be used:
 
 Service | Usage | Added?
 :--- | :--- | :---
-[Prometheus](https://prometheus.io/) | Monitoring of metrics, i.e.:<br /> - Amount of transactions waiting to be processed <br /> - min/max/avg processing time for transactions  <br /> - running miner-instances | no
+[Prometheus](https://prometheus.io/) | Monitoring of metrics, i.e.:<br /> - amount of transactions waiting to be processed <br /> - min/max/avg processing time for transactions  <br /> - running miner-instances | no
 [NATS](https://nats.io/) | Async communication between components | no
 [fluentd](https://www.fluentd.org/) | Logging | no
 [Jaeger](https://www.jaegertracing.io/) | Tracing  | no
