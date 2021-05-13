@@ -22,10 +22,11 @@ This project creates a "dummy"-blockchain scenario utilizing multiple microservi
 **It serves as an educational project in order to:**
 
 - dive into [Go](https://golang.org/)
+- learn how TDD works with Go
 - become familiar with [GitHub](https://github.com/) & [GitHub Actions](https://docs.github.com/en/actions) (the author's a [GitLab](https://gitlab.com)-guy...)
 - increase the author's practical experience with [Kubernetes](https://kubernetes.io/)
 - understand this [Blockchain](https://en.wikipedia.org/wiki/Blockchain)-thingy inside-out
-- evaluate some [CNCF graduated & incubating projects](https://www.cncf.io/projects/) like [NATS](https://nats.io/), [Jaeger](https://www.jaegertracing.io/), [Flux](https://fluxcd.io/), ...
+- evaluate some [CNCF graduated & incubating projects](https://www.cncf.io/projects/) like [Prometheus](https://prometheus.io/), [NATS](https://nats.io/), [Jaeger](https://www.jaegertracing.io/), [Flux](https://fluxcd.io/), ...
 
 **Disclaimer:**
 >This project does not claim any correctness regarding topics such as Blockchain, etc.
@@ -52,15 +53,24 @@ This Project will consist of the following components:
 
 Component | Repository | Status
 :--- | :--- | :---
-Transaction Clients | [philohsophy/transaction-client](https://github.com/philohsophy/transaction-client) | In Progress
+Transaction Spawner | [philohsophy/transaction-spawner](https://github.com/philohsophy/transaction-spawner) | v0.0.1
 Transaction Pool | [philohsophy/transaction-pool](https://github.com/philohsophy/transaction-pool) | v0.1.1
 Miners | [philohsophy/dummy-blockchain-miner](https://github.com/philohsophy/dummy-blockchain-miner) | To be implemented
 Blockchain Supervisor | [philohsophy/dummy-blockchain-supervisor](https://github.com/philohsophy/dummy-blockchain-supervisor) | To be implemented
 Models | [philohsophy/dummy-blockchain-models](https://github.com/philohsophy/dummy-blockchain-models) | v0.1.0-alpha
 
-### Transaction Clients
+Additionally the following external services will be used:
 
-Clients generate transactions.
+Service | Usage | Added?
+:--- | :--- | :---
+[Prometheus](https://prometheus.io/) | Monitoring of metrics, i.e.:<br /> - amount of transactions waiting to be processed <br /> - min/max/avg processing time for transactions  <br /> - running miner-instances | no
+[NATS](https://nats.io/) | Async communication between components | no
+[fluentd](https://www.fluentd.org/) | Logging | no
+[Jaeger](https://www.jaegertracing.io/) | Tracing  | no
+
+### Transaction Spawner(s)
+
+Clients for spawning transactions.
 
 ### Transaction Pool
 
