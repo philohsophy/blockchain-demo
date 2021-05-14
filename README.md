@@ -1,5 +1,7 @@
 # Dummy Blockchain
 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/dummy-blockchain)
+
 Part of [Dummy-Blockchain project](https://github.com/users/philohsophy/projects/1)
 
 ## Table of Contents
