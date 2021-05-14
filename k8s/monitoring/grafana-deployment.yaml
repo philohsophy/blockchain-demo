@@ -31,7 +31,7 @@ spec:
       targetPort: http-grafana
   selector:
     app: dummy-blockchain
-    tier: grafana
+    component: grafana
   sessionAffinity: None
   type: LoadBalancer
 ---
@@ -53,18 +53,18 @@ kind: Deployment
 metadata:
   labels:
     app: dummy-blockchain
-    tier: grafana
+    component: grafana
   name: grafana
 spec:
   selector:
     matchLabels:
       app: dummy-blockchain
-      tier: grafana
+      component: grafana
   template:
     metadata:
       labels:
         app: dummy-blockchain
-        tier: grafana
+        component: grafana
     spec:
       securityContext:
         fsGroup: 472

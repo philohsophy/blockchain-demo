@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app: dummy-blockchain
-    tier: transaction-pool
+    component: transaction-pool
   ports:
     - port: 80
       targetPort: http-pool
@@ -24,14 +24,14 @@ spec:
   selector:
     matchLabels:
       app: dummy-blockchain
-      tier: transaction-pool
+      component: transaction-pool
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
         app: dummy-blockchain
-        tier: transaction-pool
+        component: transaction-pool
     spec:
       containers:
       - image: philohsophy/transaction-pool:0.1.1
