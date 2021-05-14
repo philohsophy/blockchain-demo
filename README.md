@@ -1,5 +1,7 @@
 # Dummy Blockchain
 
+Part of [Dummy-Blockchain project](https://github.com/users/philohsophy/projects/1)
+
 ## Table of Contents
 
 1. [Outline](#Outline)
