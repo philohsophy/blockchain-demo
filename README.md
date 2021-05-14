@@ -37,7 +37,7 @@ The easiest way tu run this project is via [k3d](https://k3d.io/)
 
 ```bash
 # Create k3s cluster
-k3d cluster create mycluster -p 8010:80@loadbalancer --agents 2 --servers 1
+./k8s/create_cluster.sh
 kubectl config use-context k3d-mycluster
 
 # Start
