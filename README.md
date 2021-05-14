@@ -63,10 +63,11 @@ Additionally the following external services will be used:
 
 Service | Usage | Added?
 :--- | :--- | :---
-[Prometheus](https://prometheus.io/) | Monitoring of metrics, i.e.:<br /> - amount of transactions waiting to be processed <br /> - min/max/avg processing time for transactions  <br /> - running miner-instances | no
-[NATS](https://nats.io/) | Async communication between components | no
-[fluentd](https://www.fluentd.org/) | Logging | no
-[Jaeger](https://www.jaegertracing.io/) | Tracing  | no
+[Grafana](https://grafana.com/) | Visualization of Dummy-Blockchain metrics | Yes
+[Prometheus](https://prometheus.io/) | Monitoring of metrics, i.e.:<br /> - amount of transactions waiting to be processed <br /> - min/max/avg processing time for transactions  <br /> - running miner-instances | In Process
+[NATS](https://nats.io/) | Async communication between components | No
+[fluentd](https://www.fluentd.org/) | Logging | No
+[Jaeger](https://www.jaegertracing.io/) | Tracing  | No
 
 ### Transaction Spawner(s)
 
