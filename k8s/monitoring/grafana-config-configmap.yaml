@@ -1,0 +1,178 @@
+# Ref: https://github.com/felipegutierrez/explore-flink/blob/master/k8s/grafana-configuration-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-config
+  labels:
+    app: dummy-blockchain
+data:
+  grafana.ini: |+
+    [auth]
+    disable_login_form = true
+    [auth.anonymous]
+    enabled = true
+    org_role = Editor
+
+  datasources.yml: |+
+    apiVersion: 1
+
+    deleteDatasources:
+      - name: Postgres
+        orgId: 1
+      - name: Prometheus
+        orgId: 1
+    
+    datasources:
+      - name: Postgres
+        type: postgres
+        orgId: 1
+        url: postgres:5432
+        database: transactions_db
+        user: transactions_user
+        secureJsonData:
+          password: "transactions_pw"
+        jsonData:
+          sslmode: "disable" # disable/require/verify-ca/verify-full
+          maxOpenConns: 0         
+          maxIdleConns: 2
+          connMaxLifetime: 14400
+          postgresVersion: 1000 # 903=9.3, 904=9.4, 905=9.5, 906=9.6, 1000=10
+          timescaledb: false
+
+  dashboards.yml: |+
+    apiVersion: 1
+    providers:
+        - name: default
+          orgId: 1
+          folder: ''
+          type: file
+          disableDeletion: true
+          editable: true
+          options:
+            path: /etc/grafana/dashboard.json
+
+  dashboard.json: |+
+    {
+      "annotations": {
+        "list": [
+          {
+            "builtIn": 1,
+            "datasource": "-- Grafana --",
+            "enable": true,
+            "hide": true,
+            "iconColor": "rgba(0, 211, 255, 1)",
+            "name": "Annotations & Alerts",
+            "type": "dashboard"
+          }
+        ]
+      },
+      "editable": true,
+      "gnetId": null,
+      "graphTooltip": 0,
+      "id": 1,
+      "links": [],
+      "panels": [
+        {
+          "collapsed": false,
+          "datasource": null,
+          "gridPos": {
+            "h": 1,
+            "w": 24,
+            "x": 0,
+            "y": 0
+          },
+          "id": 2,
+          "panels": [],
+          "title": "Transaction Pool",
+          "type": "row"
+        },
+        {
+          "datasource": "Postgres",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 7,
+            "w": 8,
+            "x": 0,
+            "y": 1
+          },
+          "id": 4,
+          "options": {
+            "colorMode": "value",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "text": {},
+            "textMode": "auto"
+          },
+          "pluginVersion": "7.5.2",
+          "targets": [
+            {
+              "format": "table",
+              "group": [],
+              "metricColumn": "none",
+              "rawQuery": true,
+              "rawSql": "SELECT\n  count(*)\nFROM transactions",
+              "refId": "A",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "column"
+                  }
+                ]
+              ],
+              "table": "transactions",
+              "timeColumn": "time",
+              "where": []
+            }
+          ],
+          "title": "Pending Transactions",
+          "type": "stat"
+        }
+      ],
+      "schemaVersion": 27,
+      "style": "dark",
+      "tags": [],
+      "templating": {
+        "list": []
+      },
+      "time": {
+        "from": "now-6h",
+        "to": "now"
+      },
+      "timepicker": {},
+      "timezone": "",
+      "title": "Dummy-Blockchain Dashboard",
+      "uid": "gtwblsjMk",
+      "version": 4
+    }

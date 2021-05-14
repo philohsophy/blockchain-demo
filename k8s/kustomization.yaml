@@ -6,4 +6,5 @@ resources:
   - postgres-deployment.yaml
   - transaction-pool-deployment.yaml
   - transaction-spawner-cronjob.yaml
+  - ./monitoring/grafana-config-configmap.yaml
   - ./monitoring/grafana-deployment.yaml

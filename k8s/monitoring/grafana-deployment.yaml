@@ -101,9 +101,23 @@ spec:
               cpu: 250m
               memory: 750Mi
           volumeMounts:
-            - mountPath: /var/lib/grafana
-              name: grafana-pv
+            - name: grafana-pv
+              mountPath: /var/lib/grafana
+            - name: grafana-config-volume
+              mountPath: /etc/grafana/
       volumes:
         - name: grafana-pv
           persistentVolumeClaim:
             claimName: grafana-pvc
+        - name: grafana-config-volume
+          configMap:
+            name: grafana-config
+            items:
+            - key: grafana.ini
+              path: grafana.ini
+            - key: datasources.yml
+              path: provisioning/datasources/datasources.yml
+            - key: dashboards.yml
+              path: provisioning/dashboards/dashboards.yml
+            - key: dashboard.json
+              path: dashboard.json
