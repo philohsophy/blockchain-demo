@@ -111,11 +111,11 @@ Also provides convinience functions like schema-validation for each model
 
 ### Building Block View
 
-![UML](./architecture/views/building-block-view.jpg)
+![UML](./architecture/views/building-block-view.svg)
 
 ### Runtime View
 
-![UML](./architecture/views/runtime-view.jpg)
+![UML](./architecture/views/runtime-view.svg)
 
 ### Deployment View
 
