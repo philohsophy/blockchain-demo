@@ -109,14 +109,22 @@ Also provides convinience functions like schema-validation for each model
 
 ## Architecture
 
+>Hint: Use dark-mode
+
 ### Building Block View
 
-![UML](./architecture/views/building-block-view.jpg)
+---
+
+![UML](./architecture/views/building-block-view.svg)
 
 ### Runtime View
 
-![UML](./architecture/views/runtime-view.jpg)
+---
+
+![UML](./architecture/views/runtime-view.svg)
 
 ### Deployment View
+
+---
 
 TODO
