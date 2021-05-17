@@ -109,7 +109,7 @@ Also provides convinience functions like schema-validation for each model
 
 ## Architecture
 
->Hint: Use dark-mode
+>Hint: Use dark-mode (Profile → Settings → Appearance → "Default dark" / "Dark dimmed")
 
 ### Building Block View
 
