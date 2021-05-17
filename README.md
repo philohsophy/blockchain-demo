@@ -9,7 +9,7 @@ Part of [Dummy-Blockchain project](https://github.com/users/philohsophy/projects
 1. [Outline](#Outline)
 2. [How to run](#How-to-run)
 3. [Components](#Components)
-    - [Transaction Clients](#Transaction-Clients)
+    - [Transaction Spawners](#Transaction-Spawners)
     - [Transaction Pool](#Transaction-Pool)
     - [Miners](#Miners)
     - [Blockchain Supervisor](#Blockchain-Supervisor)
@@ -73,7 +73,7 @@ Service | Usage | Added?
 [fluentd](https://www.fluentd.org/) | Logging | No
 [Jaeger](https://www.jaegertracing.io/) | Tracing  | No
 
-### Transaction Spawner(s)
+### Transaction Spawners
 
 Clients for spawning transactions.
 
