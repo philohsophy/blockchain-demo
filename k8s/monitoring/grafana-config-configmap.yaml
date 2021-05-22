@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: grafana-config
   labels:
-    app: dummy-blockchain
+    app: blockchain-demo
 data:
   grafana.ini: |+
     [auth]
@@ -172,7 +172,7 @@ data:
       },
       "timepicker": {},
       "timezone": "",
-      "title": "Dummy-Blockchain Dashboard",
+      "title": "blockchain-demo Dashboard",
       "uid": "gtwblsjMk",
       "version": 4
     }

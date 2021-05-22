@@ -1,8 +1,6 @@
-# Dummy Blockchain
+# Blockchain Demo
 
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/dummy-blockchain)
-
-Part of [Dummy-Blockchain project](https://github.com/users/philohsophy/projects/1)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/blockchain-demo)
 
 ## Table of Contents
 
@@ -59,15 +57,15 @@ Component | Repository | Status
 :--- | :--- | :---
 Transaction Spawner | [philohsophy/transaction-spawner](https://github.com/philohsophy/transaction-spawner) | v0.0.1
 Transaction Pool | [philohsophy/transaction-pool](https://github.com/philohsophy/transaction-pool) | v0.1.1
-Miners | [philohsophy/dummy-blockchain-miner](https://github.com/philohsophy/dummy-blockchain-miner) | To be implemented
-Blockchain Supervisor | [philohsophy/dummy-blockchain-supervisor](https://github.com/philohsophy/dummy-blockchain-supervisor) | To be implemented
-Models | [philohsophy/dummy-blockchain-models](https://github.com/philohsophy/dummy-blockchain-models) | v0.1.0-alpha
+Miners | [philohsophy/blockchain-miner](https://github.com/philohsophy/blockchain-miner) | To be implemented
+Blockchain Supervisor | [philohsophy/blockchain-supervisor](https://github.com/philohsophy/blockchain-supervisor) | To be implemented
+Models | [philohsophy/blockchain-models](https://github.com/philohsophy/blockchain-models) | v0.1.0-alpha2
 
 Additionally the following external services will be used:
 
 Service | Usage | Added?
 :--- | :--- | :---
-[Grafana](https://grafana.com/) | Visualization of Dummy-Blockchain metrics | Yes
+[Grafana](https://grafana.com/) | Visualization of Blockchain metrics | Yes
 [Prometheus](https://prometheus.io/) | Monitoring of metrics, i.e.:<br /> - amount of transactions waiting to be processed <br /> - min/max/avg processing time for transactions  <br /> - running miner-instances | In Process
 [NATS](https://nats.io/) | Async communication between components | No
 [fluentd](https://www.fluentd.org/) | Logging | No

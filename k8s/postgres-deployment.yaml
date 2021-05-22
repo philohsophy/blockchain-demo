@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: postgres
   labels:
-    app: dummy-blockchain
+    app: blockchain-demo
 spec:
   ports:
     - port: 5432
   selector:
-    app: dummy-blockchain
+    app: blockchain-demo
     component: postgres
   clusterIP: None
 ---
@@ -17,7 +17,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: postgres-pvc
   labels:
-    app: dummy-blockchain
+    app: blockchain-demo
 spec:
   accessModes:
     - ReadWriteOnce
@@ -30,18 +30,18 @@ kind: Deployment
 metadata:
   name: postgres
   labels:
-    app: dummy-blockchain
+    app: blockchain-demo
 spec:
   selector:
     matchLabels:
-      app: dummy-blockchain
+      app: blockchain-demo
       component: postgres
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: dummy-blockchain
+        app: blockchain-demo
         component: postgres
     spec:
       containers:

@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: transaction-spawner
   labels:
-    app: dummy-blockchain
+    app: blockchain-demo
     component: transaction-spawner
 spec:
   schedule: "*/1 * * * *"

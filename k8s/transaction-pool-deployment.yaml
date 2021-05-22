@@ -4,10 +4,10 @@ kind: Service
 metadata:
   name: transaction-pool
   labels:
-    app: dummy-blockchain
+    app: blockchain-demo
 spec:
   selector:
-    app: dummy-blockchain
+    app: blockchain-demo
     component: transaction-pool
   ports:
     - port: 80
@@ -19,18 +19,18 @@ kind: Deployment
 metadata:
   name: transaction-pool
   labels:
-    app: dummy-blockchain
+    app: blockchain-demo
 spec:
   selector:
     matchLabels:
-      app: dummy-blockchain
+      app: blockchain-demo
       component: transaction-pool
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: dummy-blockchain
+        app: blockchain-demo
         component: transaction-pool
     spec:
       containers:
