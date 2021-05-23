@@ -55,11 +55,11 @@ This Project will consist of the following components:
 
 Component | Repository | Status
 :--- | :--- | :---
-Transaction Spawner | [philohsophy/transaction-spawner](https://github.com/philohsophy/transaction-spawner) | v0.0.1
-Transaction Pool | [philohsophy/transaction-pool](https://github.com/philohsophy/transaction-pool) | v0.1.1
-Miners | [philohsophy/blockchain-miner](https://github.com/philohsophy/blockchain-miner) | To be implemented
-Blockchain Supervisor | [philohsophy/blockchain-supervisor](https://github.com/philohsophy/blockchain-supervisor) | To be implemented
-Models | [philohsophy/blockchain-models](https://github.com/philohsophy/blockchain-models) | v0.1.0-alpha2
+Transaction Spawner | [philohsophy/transaction-spawner](https://github.com/philohsophy/transaction-spawner) | ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/transaction-spawner)
+Transaction Pool | [philohsophy/transaction-pool](https://github.com/philohsophy/transaction-pool) | ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/transaction-pool)
+Miners | [philohsophy/blockchain-miner](https://github.com/philohsophy/blockchain-miner) | ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/blockchain-miner)
+Blockchain Supervisor | [philohsophy/blockchain-supervisor](https://github.com/philohsophy/blockchain-supervisor) | ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/blockchain-supervisor)
+Models | [philohsophy/blockchain-models](https://github.com/philohsophy/blockchain-models) | ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/philohsophy/blockchain-models)
 
 Additionally the following external services will be used:
 
