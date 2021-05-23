@@ -19,7 +19,7 @@
 
 ## Outline
 
-This project creates a "dummy"-blockchain scenario utilizing multiple microservices which are orchestrated via Kubernetes.
+This project creates a blockchain scenario utilizing multiple microservices which are orchestrated via Kubernetes.
 
 **It serves as an educational project in order to:**
 
