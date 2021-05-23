@@ -27,7 +27,7 @@ This project creates a blockchain scenario utilizing multiple microservices whic
 - learn how TDD works with Go
 - become familiar with [GitHub](https://github.com/) & [GitHub Actions](https://docs.github.com/en/actions) (the author's a [GitLab](https://gitlab.com)-guy...)
 - increase the author's practical experience with [Kubernetes](https://kubernetes.io/)
-- understand this [Blockchain](https://en.wikipedia.org/wiki/Blockchain)-thingy inside-out
+- understand [Blockchain](https://en.wikipedia.org/wiki/Blockchain)-mechanisms
 - evaluate some [CNCF graduated & incubating projects](https://www.cncf.io/projects/) like [Prometheus](https://prometheus.io/), [NATS](https://nats.io/), [Jaeger](https://www.jaegertracing.io/), [Flux](https://fluxcd.io/), ...
 
 **Disclaimer:**
