@@ -8,3 +8,4 @@ resources:
   - transaction-spawner-cronjob.yaml
   - ./monitoring/grafana-config-configmap.yaml
   - ./monitoring/grafana-deployment.yaml
+  - ./fluent/fluentd-config-configmap.yaml

@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  fluentd-kube.conf: "<source>\n  @type http\n  port 24220\n  bind 0.0.0.0\n</source>\n\n<source>\n
+    \ @type forward\n  port 24224\n  bind 0.0.0.0\n</source>\n\n<match **> \n  @type
+    stdout\n</match>\n"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: fluentd-config
